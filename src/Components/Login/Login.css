@@ -1,0 +1,24 @@
+
+.log_in{
+    width: 25vw;
+}
+@media only screen and (max-width : 426px){
+    .log_in{
+        width : 80vw
+    }
+}
+.form p span{
+    color: rgb(39, 54, 190);
+    font-weight: 500;
+    cursor: pointer; 
+}
+#msg{
+    color: red;
+    font-weight: 600;
+}
+#google{
+    font-weight: 500;
+    border : none;
+    border-radius: 15px;
+    padding: 5px 20px;
+}

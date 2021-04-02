@@ -1,0 +1,12 @@
+.t_decoration:hover{
+    text-decoration: none;
+}
+.border_radius{
+    border-radius: 5px;
+}
+.user-Image{
+    height: 30px;
+    border-radius: 50%;
+    background-color: none;
+    border-color: none;
+}

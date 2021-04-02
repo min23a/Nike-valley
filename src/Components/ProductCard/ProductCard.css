@@ -1,0 +1,15 @@
+.card img{
+    height: 200px;
+}
+.price{
+    font-size: medium;
+    font-weight: 500;
+    color: rgb(73, 172, 73);
+}
+.buy_now:hover{
+    text-decoration: none;
+}
+.buy_now {
+    font-weight: 700;
+    border-radius: 3px;
+}
