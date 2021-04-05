@@ -1,6 +1,6 @@
-import { library } from '@fortawesome/fontawesome-svg-core';
 import React, { useContext, useEffect, useState } from 'react';
 import { dataContext } from '../../App';
+import OrderBox from '../OrderBox/OrderBox';
 
 const Orders = () => {
     const {users} = useContext(dataContext)
@@ -12,11 +12,15 @@ const Orders = () => {
         .then(res => res.json())
         .then(data => setOrders(data))
     }, [user])
+    console.log(orders)
     return (
-        <div>
-            {
-                orders.map(order => <li>{order.productDetail.productName}</li>)
-            }
+        <div className="container">
+            <div className="container">
+                <h3>Orders :</h3>
+                {
+                    orders.map(order => <OrderBox order={order}></OrderBox>)
+                }
+            </div>
         </div>
     );
 };

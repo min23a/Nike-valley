@@ -9,6 +9,7 @@ import Checkout from './Components/Checkout/Checkout';
 import Admin from './Components/Admin/Admin';
 import Addproduct from './Components/AddProduct/Addproduct';
 import ManageProduct from './Components/ManageProduct/ManageProduct';
+import Orders from './Components/Orders/Orders';
 
 export const dataContext = createContext();
 
@@ -41,6 +42,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/manageProduct">
             <ManageProduct />
+          </PrivateRoute>
+          <PrivateRoute path="/orders">
+            <Orders/>
           </PrivateRoute>
           <Route exact path="/">
             <Home />

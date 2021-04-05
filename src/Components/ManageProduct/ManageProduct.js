@@ -1,26 +1,20 @@
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import e from 'cors';
 import React, { useEffect, useState } from 'react';
-import { Link, Redirect, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ManageProduct = () => {
     const [products,setProducts] = useState([]);
-    const [productId,setProductId] = useState({})
-    const history = useHistory();
     useEffect(() => {
         fetch('https://lychee-custard-72086.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
-    console.log(products[0])
-    
-    useEffect(() => {
-        fetch(`https://lychee-custard-72086.herokuapp.com/delete/${productId}`, { method: 'DELETE' })
-            .then(res => console.log(res));
-    },[productId])
     const handleClick = (product_id) => {
-        setProductId(product_id);
+        const url = `https://lychee-custard-72086.herokuapp.com/delete/${product_id}`
+        console.log(url);
+        // fetch(url, { method: 'DELETE' })
+        //     .then(res => console.log(res));
     }
     return (
         <div className="w-100">
