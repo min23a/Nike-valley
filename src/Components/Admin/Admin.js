@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Addproduct from '../AddProduct/Addproduct';
 
 const Admin = () => {
     return (
@@ -11,7 +10,7 @@ const Admin = () => {
                     <li className="m-3" style={{ fontSize: '24px', listStyle: 'none' }}><Link to='/manageProduct'>Manage Product</Link></li>
                 </div>
                 <div className="col-md-9">
-                    
+
                 </div>
             </div>
         </div>
