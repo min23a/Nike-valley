@@ -11,7 +11,7 @@ const Admin = () => {
                     <li className="m-3" style={{ fontSize: '24px', listStyle: 'none' }}><Link to='/manageProduct'>Manage Product</Link></li>
                 </div>
                 <div className="col-md-9">
-                    <Addproduct/>
+                    
                 </div>
             </div>
         </div>
