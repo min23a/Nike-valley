@@ -29,7 +29,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/login">
-            <Login></Login>
+            <Login/>
           </Route>
           <PrivateRoute path="/checkout/:id">
             <Checkout/>
