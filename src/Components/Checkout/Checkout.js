@@ -14,20 +14,30 @@ const Checkout = () => {
     const [order,setOrder] = useState({
         name: displayName,
         email : email,
-        productDetail: product,
+        productDetail: {},
         quantity : 1,
         time: new Date()
     });
     useEffect(() => {
         fetch(`https://lychee-custard-72086.herokuapp.com/product/${id}`)
         .then(res => res.json())
-        .then(data => setProduct(data))
+        .then(data => {
+            setProduct(data)
+        })
     }, [id])
+    const handleOrderDetail = () => {
+        const newOrder = { ...order }
+        newOrder.productDetail = product;
+        setOrder(newOrder)
+    }
+    
     const handleOrder = () => {
-        console.log(order)
         axios.post('https://lychee-custard-72086.herokuapp.com/orders', order)
-            .then(res => console.log(res))
-        document.getElementById('successText').classList.toggle('d-none');
+            .then(res => {
+                console.log(res)
+                document.getElementById('successText').classList.toggle('d-none');
+            })
+        
     }
     return (
         <div  className="container m-5 p-5">
@@ -68,7 +78,7 @@ const Checkout = () => {
                 </table>
             </div>
             <div className="d-flex justify-content-end">
-                <button onClick={handleOrder} className="btn btn-success">Checkout</button>
+                <button onMouseOver={handleOrderDetail} onClick={handleOrder} className="btn btn-success">Checkout</button>
             </div>
             <h3 id="successText" className="text-success text-center d-none">Order placed SuccessFully!!!</h3>
         </div>
