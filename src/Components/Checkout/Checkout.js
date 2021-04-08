@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useContext } from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { dataContext } from '../../App';
 
 const Checkout = () => {
@@ -78,7 +78,9 @@ const Checkout = () => {
                 </table>
             </div>
             <div className="d-flex justify-content-end">
-                <button onMouseOver={handleOrderDetail} onClick={handleOrder} className="btn btn-success">Checkout</button>
+                <Link to="/orders">
+                    <button onMouseOver={handleOrderDetail} onClick={handleOrder} className="btn btn-success">Checkout</button>
+                </Link>
             </div>
             <h3 id="successText" className="text-success text-center d-none">Order placed SuccessFully!!!</h3>
         </div>

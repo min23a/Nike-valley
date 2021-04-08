@@ -37,7 +37,7 @@ const Header = () => {
                         </NavItem>
                         :
                         <NavItem className="mx-3 btn-success p-2 border_radius">
-                        <Link className="text-white font-weight-bold t_decoration" to="/login">Log In</Link>
+                            <Link className="text-white font-weight-bold t_decoration" to="/login">Log In</Link>
                         </NavItem>
                         }
                     
